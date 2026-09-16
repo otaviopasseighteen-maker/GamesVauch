@@ -52,5 +52,12 @@ document.querySelector('#demoButton').addEventListener('click', () => {
   document.querySelector('#library').scrollIntoView({ behavior: 'smooth' });
 });
 
+const loginButton = document.querySelector('#loginButton');
+if (loginButton) {
+  loginButton.addEventListener('click', () => {
+    window.location.href = 'auth.html';
+  });
+}
+
 updateStats();
 render();
