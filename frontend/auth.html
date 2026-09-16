@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GamesVauch account authentication.">
+  <title>GamesVauch | Account</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <a class="brand auth-brand" href="./">GamesVauch</a>
+    <section class="auth-card">
+      <div class="auth-heading">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1 id="authTitle">Sign in</h1>
+        <p id="authSubtitle" class="muted">Access your personal game library.</p>
+      </div>
+
+      <div class="auth-tabs" role="tablist" aria-label="Authentication mode">
+        <button class="auth-tab active" id="loginTab" type="button">Sign in</button>
+        <button class="auth-tab" id="registerTab" type="button">Create account</button>
+      </div>
+
+      <form id="authForm" novalidate>
+        <div class="form-field register-only hidden">
+          <label for="displayName">Display name</label>
+          <input id="displayName" name="displayName" type="text" autocomplete="name" minlength="2" maxlength="100">
+        </div>
+
+        <div class="form-field register-only hidden">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" autocomplete="username" minlength="3" maxlength="50">
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="255">
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" required>
+        </div>
+
+        <p id="authMessage" class="form-message" role="alert" aria-live="polite"></p>
+        <button class="btn btn-primary auth-submit" id="submitButton" type="submit">Sign in</button>
+      </form>
+
+      <p class="auth-footer"><a href="./">← Back to GamesVauch</a></p>
+    </section>
+  </main>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
